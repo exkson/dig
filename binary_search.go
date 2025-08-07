@@ -4,7 +4,7 @@ const SENTINEL = 255
 
 func binarySearch(arr []int, item int) int {
 	low := 0
-	high := len(arr)
+	high := len(arr) - 1
 
 	var mid int
 	for low <= high {
