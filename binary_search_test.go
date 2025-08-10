@@ -3,10 +3,10 @@ package dig
 import "testing"
 
 func TestBinarySearch(t *testing.T) {
-	arr := []int{1, 2, 4, 5, 6, 8, 12, 15, 16, 17, 20, 22, 34}
-	item := 5
+	arr := []uint8{1, 2, 4, 5, 6, 8, 12, 15, 16, 17, 20, 22, 34}
+	var item uint8 = 5
 
-	expected := 3
+	var expected uint8 = 3
 	received := binarySearch(arr, item)
 	if received != expected {
 		t.Errorf("expected %d, received %d", expected, received)
@@ -14,8 +14,8 @@ func TestBinarySearch(t *testing.T) {
 }
 
 func TestBinarySearchOnNonExistentItem(t *testing.T) {
-	arr := []int{1, 2, 4, 5, 6, 8, 12, 15, 16, 17, 20, 22, 34}
-	item := 3
+	arr := []uint8{1, 2, 4, 5, 6, 8, 12, 15, 16, 17, 20, 22, 34}
+	var item uint8 = 3
 
 	received := binarySearch(arr, item)
 	if received != SENTINEL {
